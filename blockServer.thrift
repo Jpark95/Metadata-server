@@ -23,8 +23,8 @@ struct hashBlocks {
 service BlockServerService {
 	response storeBlock(1: hashBlock hashblock),
 	hashBlock getBlock(1: string hash),
-	response deleteBlock(1: string hash)
-
+	response deleteBlock(1: string hash),
+	bool hasBlock(1: string hash)
 	// Add any procedure you need below
 
 }

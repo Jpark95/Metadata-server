@@ -12,7 +12,10 @@ typedef shared.uploadResponse uploadResponse
 
 service MetadataServerService {
 
-	file getFile(1: string filename),
+	void gossip(),
+	file updateFile(1: file f),
+	file getFile(1: string filename, 2: i32 v),
 	uploadResponse storeFile(1: file f),
-	response deleteFile(1: file f)
+	void deleteFromServer(1: string filename, 2: i32 q),
+	response deleteFile(1: string filename)
 }

@@ -24,14 +24,13 @@ enum uploadResponseType {
 struct uploadResponse {
 	1: uploadResponseType status,
 	2: list<string> hashList,
-	3: list<list<string>> blockServerList
 }
 
 struct file {
 	1: string filename,
 	2: i32 version,
 	3: list<string> hashList,
-	5: responseType status
+	4: responseType status
 }
 
 // Add any data structure you need here
